@@ -1,0 +1,8 @@
+*.pyc
+__pycache__/
+*.tmp
+.vscode/
+.idea/
+venv/
+.env
+.pytest_cache/
