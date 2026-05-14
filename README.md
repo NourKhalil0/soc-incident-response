@@ -7,3 +7,11 @@ Personal collection of incident response standard operating procedures (SOPs), d
 - `rules/`: Sigma detection rules for Windows endpoint and cloud telemetry.
 - `scripts/`: Python command-line utilities for artifact extraction and log analysis.
 - `templates/`: Post-mortem incident report templates.
+
+## Severity Matrix
+| Level | Description | Target SLA |
+|---|---|---|
+| P1 - Critical | Active ransomware, Domain Controller compromise | Immediate (< 15m) |
+| P2 - High | Multi-system malware outbreak, confirmed data exfiltration | < 1 hour |
+| P3 - Medium | Isolated malware on workstation, suspicious lateral attempt | < 4 hours |
+| P4 - Low | Phishing blocked at gateway, policy violations | < 24 hours |
