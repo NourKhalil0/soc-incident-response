@@ -4,3 +4,11 @@ Personal collection of incident response SOPs, detection engineering rules, and 
 
 ## Overview
 Documentation and code developed during cybersecurity lab simulations.
+
+## Severity Matrix
+| Level | Description | Target SLA |
+|---|---|---|
+| P1 - Critical | Active ransomware, Domain Controller compromise | Immediate (< 15m) |
+| P2 - High | Multi-system malware outbreak, confirmed data exfiltration | < 1 hour |
+| P3 - Medium | Isolated malware on workstation, suspicious lateral attempt | < 4 hours |
+| P4 - Low | Phishing blocked at gateway, policy violations | < 24 hours |
