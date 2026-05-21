@@ -8,3 +8,8 @@ Guide Tier 1 and Tier 2 SOC analysts through triage, header analysis, attachment
 - [ ] Inspect originating IP and client hostname from earliest `Received:` header.
 - [ ] Verify SPF, DKIM, and DMARC authentication verdicts in `Authentication-Results`.
 - [ ] Check sender domain for typosquatting / visual lookalike characters.
+
+## 3. Header Analysis Procedures
+1. **SPF (Sender Policy Framework):** Check if sending server IP is authorized in sender domain TXT DNS record.
+2. **DKIM (DomainKeys Identified Mail):** Validate cryptographic signature against published public key.
+3. **DMARC (Domain-based Message Authentication):** Check alignment between visible `From:` header and authenticated SPF/DKIM domains.
