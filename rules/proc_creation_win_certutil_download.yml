@@ -1,0 +1,26 @@
+title: Certutil Ingress File Transfer
+id: e82f91bc-3184-48d1-81f1-398bb99da201
+status: stable
+description: Detects certutil.exe used as a LOLBAS tool to download remote files
+author: Nour Mo
+references:
+  - https://lolbas-project.github.io/lolbas/Binaries/Certutil/
+logsource:
+  category: process_creation
+  product: windows
+detection:
+  selection:
+    Image|endswith: '\certutil.exe'
+    CommandLine|contains:
+      - '-urlcache'
+      - '-split'
+  filter_crl:
+    CommandLine|contains: '-verifyctl'
+  condition: selection and not filter_crl
+fields:
+  - CommandLine
+  - ParentImage
+level: high
+tags:
+  - attack.command_and_control
+  - attack.t1105
