@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """
 Authentication Log Parser for SOC Triage.
-Extracts failed authentication attempts and identifies top offending source IPs.
+Extracts failed authentication attempts and identifies top offending source IPs (supporting IPv4 and IPv6).
 """
 
 import re
@@ -10,7 +10,7 @@ import argparse
 from collections import Counter
 
 FAILED_PASSWORD_PATTERN = re.compile(
-    r"Failed password for (?:invalid user )?(\S+) from (\d{1,3}(?:\.\d{1,3}){3}) port (\d+)"
+    r"Failed password for (?:invalid user )?(\S+) from ([a-fA-F0-9:.]+) port (\d+)"
 )
 
 def parse_auth_file(filepath):
