@@ -9,8 +9,9 @@ import sys
 import argparse
 from collections import Counter
 
+# Updated pattern to support both IPv4 and IPv6 addresses
 FAILED_PASSWORD_PATTERN = re.compile(
-    r"Failed password for (?:invalid user )?(\S+) from (\d{1,3}(?:\.\d{1,3}){3}) port (\d+)"
+    r"Failed password for (?:invalid user )?(\S+) from ([a-fA-F0-9:.]+) port (\d+)"
 )
 
 def parse_auth_file(filepath):
