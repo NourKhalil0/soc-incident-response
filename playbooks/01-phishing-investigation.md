@@ -19,3 +19,13 @@ Guide Tier 1 and Tier 2 SOC analysts through triage, header analysis, attachment
 - Submit samples to automated sandbox (ANY.RUN, Hybrid Analysis, CAPEv2).
 - Inspect extracted macro streams using `olevba`.
 - Defang all extracted URLs before documenting in incident tickets.
+
+## 5. Mailbox Containment Procedures
+- Use Microsoft Defender for Office 365 Explorer to execute a tenant-wide `HardDelete`.
+- PowerShell remediation:
+  ```powershell
+  New-ComplianceSearch -Name 'Phish_Purge' -ExchangeLocation All -ContentMatchQuery 'Subject:"Invoice Due"'
+  Start-ComplianceSearch -Identity 'Phish_Purge'
+  New-ComplianceSearchAction -SearchName 'Phish_Purge' -Purge -PurgeType HardDelete
+  ```
+- Block sender domain and originating IP on perimeter secure email gateway (SEG).
