@@ -12,3 +12,10 @@ Documentation and code developed during cybersecurity lab simulations.
 | P2 - High | Multi-system malware outbreak, confirmed data exfiltration | < 1 hour |
 | P3 - Medium | Isolated malware on workstation, suspicious lateral attempt | < 4 hours |
 | P4 - Low | Phishing blocked at gateway, policy violations | < 24 hours |
+
+## Toolset Quickstart
+```bash
+python scripts/parse_auth_logs.py /var/log/auth.log --threshold 10
+python scripts/extract_iocs.py triage_notes.txt --defang --json
+pytest tests/
+```
