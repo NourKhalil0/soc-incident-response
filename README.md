@@ -15,3 +15,15 @@ Personal collection of incident response standard operating procedures (SOPs), d
 | P2 - High | Multi-system malware outbreak, confirmed data exfiltration | < 1 hour |
 | P3 - Medium | Isolated malware on workstation, suspicious lateral attempt | < 4 hours |
 | P4 - Low | Phishing blocked at gateway, policy violations | < 24 hours |
+
+## Toolset Quickstart
+```bash
+# Parse SSH authentication logs for brute-force attacks
+python scripts/parse_auth_logs.py /var/log/auth.log --threshold 10
+
+# Extract and defang IOCs from incident reports
+python scripts/extract_iocs.py triage_notes.txt --defang --json
+
+# Run test suite
+pytest tests/
+```
