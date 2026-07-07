@@ -14,3 +14,12 @@ Rapidly isolate affected endpoints to prevent lateral propagation, preserve vola
 3. **Identity & Directory Service:**
    - Disable compromised service accounts and domain admin credentials.
    - Enable Kerberos Armor (FAST) and rotate KRBTGT password twice.
+
+## 3. Evidence Preservation & Forensic Artifacts
+- Capture RAM using WinPmem / LiME.
+- Extract Security Event Logs:
+  - `4624` (Successful Logon)
+  - `4625` (Failed Logon)
+  - `7045` (Service Installed)
+- Verify state of Volume Shadow Copies (`vssadmin list shadows`).
+- Check Ransom note timestamp to pinpoint the start of the encryption wave.
