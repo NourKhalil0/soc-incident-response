@@ -7,3 +7,8 @@ Rapidly isolate affected endpoints to prevent lateral propagation, preserve vola
 1. Isolate Affected Endpoints via EDR.
 2. Restrict SMB (445) and RDP (3389) inter-VLAN routing.
 3. Rotate KRBTGT twice and reset compromised privileged credentials.
+
+## 3. Evidence Preservation
+- Capture RAM using WinPmem / LiME.
+- Verify state of Volume Shadow Copies (`vssadmin list shadows`).
+- Check ransom note timestamp to establish breach timeline.
