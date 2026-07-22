@@ -19,3 +19,5 @@ python scripts/parse_auth_logs.py /var/log/auth.log --threshold 10
 python scripts/extract_iocs.py triage_notes.txt --defang --json
 pytest tests/
 ```
+
+- `cheatsheets/windows-memory-acquisition.md`: Volatile RAM acquisition guide.
