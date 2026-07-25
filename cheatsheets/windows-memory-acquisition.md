@@ -10,3 +10,6 @@ Procedures for collecting volatile RAM artifacts during live triage.
 ## Hash Verification
 Compute SHA-256 immediately after acquisition:
 `certutil -hashfile mem_dump.raw SHA256 > mem_dump.sha256`
+
+## Linux / ESXi Volatile Capture
+- LiME (Linux Memory Extractor): `insmod lime.ko "path=/tmp/ram.lime format=raw"`
