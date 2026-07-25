@@ -13,3 +13,5 @@ Compute SHA-256 immediately after acquisition:
 
 ## Linux / ESXi Volatile Capture
 - LiME (Linux Memory Extractor): `insmod lime.ko "path=/tmp/ram.lime format=raw"`
+
+- Verify kernel header compatibility prior to loading LiME.
