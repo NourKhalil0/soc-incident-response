@@ -18,3 +18,13 @@ DeviceNetworkEvents
 | where RemotePort in (4444, 8080, 8443, 9001, 1337)
 | project Timestamp, DeviceName, RemoteIP, RemotePort, RemoteUrl, InitiatingProcessFileName
 ```
+
+## 3. High Volume Failed Sign-ins (Entra ID Password Spray)
+```kql
+SigninLogs
+| where CreatedDateTime > ago(1d)
+| where ResultType in ("50126", "50053")
+| summarize FailureCount = count(), UniqueAccounts = dcount(UserPrincipalName) by IPAddress, Location
+| where UniqueAccounts >= 10
+| sort by FailureCount desc
+```
