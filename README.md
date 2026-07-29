@@ -21,3 +21,8 @@ pytest tests/
 ```
 
 - `cheatsheets/windows-memory-acquisition.md`: Volatile RAM acquisition guide.
+
+```bash
+# Parse Volatility malfind reports for injected shellcode
+python scripts/analyze_memory_dump.py malfind.txt
+```
