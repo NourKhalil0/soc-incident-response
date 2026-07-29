@@ -26,6 +26,7 @@ def parse_malfind_output(text: str):
 def main():
     parser = argparse.ArgumentParser(description="Parse Volatility malfind outputs")
     parser.add_argument("file", help="Path to malfind text report")
+    args = parser.add_argument('--pid', type=int, help='Filter by target PID')
     args = parser.parse_args()
 
     try:
@@ -42,5 +43,3 @@ def main():
 
 if __name__ == "__main__":
     main()
-
-# Formatted with standard argparse epilog
