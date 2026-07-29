@@ -15,3 +15,6 @@ class TestMalfindParser(unittest.TestCase):
 
 if __name__ == '__main__':
     unittest.main()
+
+    def test_empty_input(self):
+        self.assertEqual(len(parse_malfind_output('')), 0)
