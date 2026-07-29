@@ -15,3 +15,7 @@ Compute SHA-256 immediately after acquisition:
 - LiME (Linux Memory Extractor): `insmod lime.ko "path=/tmp/ram.lime format=raw"`
 
 - Verify kernel header compatibility prior to loading LiME.
+
+## Volatility 3 Analysis Commands
+`python3 vol.py -f mem.raw windows.malfind`
+`python3 vol.py -f mem.raw windows.psscan`
