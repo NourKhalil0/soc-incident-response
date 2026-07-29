@@ -12,3 +12,5 @@ Rapidly isolate affected endpoints to prevent lateral propagation, preserve vola
 - Capture RAM using WinPmem / LiME.
 - Verify state of Volume Shadow Copies (`vssadmin list shadows`).
 - Check ransom note timestamp to establish breach timeline.
+
+- Cross-reference memory triage findings with `cheatsheets/windows-memory-acquisition.md`.
