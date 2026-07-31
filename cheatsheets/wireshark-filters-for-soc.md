@@ -7,3 +7,6 @@
 ## 2. Lateral Movement
 - `smb2.cmd == 1 && ip.dst == 10.0.0.0/8` (SMB file share staging)
 - `tcp.port == 3389 and tcp.flags.syn == 1`
+
+## 3. Data Exfiltration
+- Large outbound TCP streams: `tcp.len > 1460 and ip.dst != 10.0.0.0/8`
