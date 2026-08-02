@@ -4,3 +4,7 @@
 - Mass file download from SharePoint / OneDrive by departing employee.
 - USB Mass Storage device inserted on sensitive workstation.
 - Sensitive data transferred via personal webmail or cloud storage.
+
+## 2. USB Artifact Triage
+- Inspect registry key `SYSTEM\CurrentControlSet\Enum\USBSTOR`.
+- Review `setupapi.dev.log` for device serial number and first connection timestamp.
