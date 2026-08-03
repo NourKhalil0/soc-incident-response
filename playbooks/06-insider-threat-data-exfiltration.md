@@ -8,3 +8,7 @@
 ## 2. USB Artifact Triage
 - Inspect registry key `SYSTEM\CurrentControlSet\Enum\USBSTOR`.
 - Review `setupapi.dev.log` for device serial number and first connection timestamp.
+
+## 3. Cloud Storage Audit
+- Review Microsoft Purview Audit log for `FileDownloaded` events.
+- Correlate volume of downloaded files with user's historical 30-day baseline.
