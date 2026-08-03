@@ -12,3 +12,7 @@
 ## 3. Cloud Storage Audit
 - Review Microsoft Purview Audit log for `FileDownloaded` events.
 - Correlate volume of downloaded files with user's historical 30-day baseline.
+
+## 4. Immediate Containment
+- Block external USB write access via Intune Device Control.
+- Revoke user session and apply restrictive Conditional Access policy.
