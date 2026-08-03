@@ -28,3 +28,5 @@ python scripts/analyze_memory_dump.py malfind.txt
 ```
 
 - `cheatsheets/wireshark-filters-for-soc.md`: Network packet analysis filters.
+
+- `playbooks/06-insider-threat-data-exfiltration.md`: Insider threat SOP.
