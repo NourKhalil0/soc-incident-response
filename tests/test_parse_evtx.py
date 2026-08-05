@@ -25,3 +25,6 @@ class TestEvtxParser(unittest.TestCase):
 
 if __name__ == '__main__':
     unittest.main()
+
+    def test_invalid_xml(self):
+        self.assertEqual(len(parse_events_xml('invalid xml')), 0)
