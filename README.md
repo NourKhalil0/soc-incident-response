@@ -30,3 +30,8 @@ python scripts/analyze_memory_dump.py malfind.txt
 - `cheatsheets/wireshark-filters-for-soc.md`: Network packet analysis filters.
 
 - `playbooks/06-insider-threat-data-exfiltration.md`: Insider threat SOP.
+
+```bash
+# Parse exported Windows Security XML events
+python scripts/parse_evtx_events.py security_export.xml --filter 4625
+```
