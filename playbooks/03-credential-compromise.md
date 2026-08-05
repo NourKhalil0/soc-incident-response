@@ -6,3 +6,5 @@ Applicable when user accounts trigger impossible travel alerts or leaked credent
 ## 2. Containment Sequence
 1. Invalidate active session tokens (`Revoke-MgUserSignInSession`).
 2. Force password reset and audit registered MFA methods.
+
+- Use `scripts/parse_evtx_events.py` to triage Event ID 4625 brute-force bursts.
