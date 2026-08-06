@@ -95,3 +95,5 @@ if __name__ == "__main__":
     main()
 
 # Enriched event description dictionary mapping
+
+# Formatted table alignment
