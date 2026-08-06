@@ -25,3 +25,5 @@ Detailed explanation of attack path and initial ingress vector.
 - [ ] Update detection signatures in SIEM
 - [ ] Remediate identified configuration vulnerabilities
 - [ ] Conduct end-user awareness refresher
+
+- Attach parsed event ID frequency summary from `parse_evtx_events.py`.
