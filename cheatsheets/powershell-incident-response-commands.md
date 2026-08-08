@@ -10,3 +10,6 @@ Rapid live triage commands for Windows endpoints.
 
 ## 3. Local Account & Administrators
 `Get-LocalGroupMember -Group 'Administrators'`
+
+## 4. Scheduled Tasks
+`Get-ScheduledTask | Where-Object State -ne 'Disabled' | Select-Object TaskName, TaskPath`
