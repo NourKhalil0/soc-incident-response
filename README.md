@@ -35,3 +35,5 @@ python scripts/analyze_memory_dump.py malfind.txt
 # Parse exported Windows Security XML events
 python scripts/parse_evtx_events.py security_export.xml --filter 4625
 ```
+
+- `cheatsheets/powershell-incident-response-commands.md`: Live PowerShell triage commands.
