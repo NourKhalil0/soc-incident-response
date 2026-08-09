@@ -13,3 +13,6 @@ Rapid live triage commands for Windows endpoints.
 
 ## 4. Scheduled Tasks
 `Get-ScheduledTask | Where-Object State -ne 'Disabled' | Select-Object TaskName, TaskPath`
+
+## 5. Persistence in Registry
+`Get-ItemProperty 'HKLM:\Software\Microsoft\Windows\CurrentVersion\Run'`
