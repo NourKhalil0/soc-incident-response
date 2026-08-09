@@ -16,3 +16,5 @@ Rapid live triage commands for Windows endpoints.
 
 ## 5. Persistence in Registry
 `Get-ItemProperty 'HKLM:\Software\Microsoft\Windows\CurrentVersion\Run'`
+
+- Note: Always pipe output to hash tables or out-file for chain of custody.
