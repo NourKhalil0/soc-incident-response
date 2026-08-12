@@ -12,6 +12,7 @@ import argparse
 IPV4_REGEX = re.compile(r"\b(?:[0-9]{1,3}\.){3}[0-9]{1,3}\b")
 SHA256_REGEX = re.compile(r"\b[a-fA-F0-9]{64}\b")
 MD5_REGEX = re.compile(r"\b[a-fA-F0-9]{32}\b")
+DOMAIN_REGEX = re.compile(r"\b(?:[a-zA-Z0-9-]+\.)+(?:com|org|net|io|edu|mil|gov|biz|info|xyz|top)\b", re.IGNORECASE)
 
 def defang(indicator: str) -> str:
     return indicator.replace(".", "[.]")
@@ -28,10 +29,15 @@ def extract_iocs_from_text(text: str, do_defang: bool = False):
     if do_defang:
         public_ips = [defang(ip) for ip in public_ips]
 
+    raw_domains = set(DOMAIN_REGEX.findall(text))
+    domains = [d for d in raw_domains if not is_private_ip(d)]
+    if do_defang:
+        domains = [defang(d) for d in domains]
     return {
         "ipv4": sorted(public_ips),
         "sha256": sha256,
-        "md5": md5
+        "md5": md5,
+        "domains": sorted(domains)
     }
 
 def main():
