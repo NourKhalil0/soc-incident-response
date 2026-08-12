@@ -14,3 +14,5 @@ Rapidly isolate affected endpoints to prevent lateral propagation, preserve vola
 - Check ransom note timestamp to establish breach timeline.
 
 - Cross-reference memory triage findings with `cheatsheets/windows-memory-acquisition.md`.
+
+- Verified against Cobalt Strike emulation runbook.
