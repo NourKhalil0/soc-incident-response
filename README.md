@@ -37,3 +37,5 @@ python scripts/parse_evtx_events.py security_export.xml --filter 4625
 ```
 
 - `cheatsheets/powershell-incident-response-commands.md`: Live PowerShell triage commands.
+
+- `docs/lab-simulation-02-cobalt-strike.md`: Beacon triage simulation.
