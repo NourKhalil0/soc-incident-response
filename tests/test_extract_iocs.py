@@ -18,5 +18,11 @@ class TestIOCExtractor(unittest.TestCase):
         self.assertNotIn("192.168.1.1", res["ipv4"])
         self.assertIn("e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855", res["sha256"])
 
+    def test_domain_filtering(self):
+        sample = "Adversary beacon connected to c2-panel.xyz and malicious-domain.top"
+        res = extract_iocs_from_text(sample, do_defang=True)
+        self.assertIn("c2-panel[.]xyz", res["domains"])
+        self.assertIn("malicious-domain[.]top", res["domains"])
+
 if __name__ == '__main__':
     unittest.main()
