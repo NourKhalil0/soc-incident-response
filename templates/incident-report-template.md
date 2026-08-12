@@ -27,3 +27,5 @@ Detailed explanation of attack path and initial ingress vector.
 - [ ] Conduct end-user awareness refresher
 
 - Attach parsed event ID frequency summary from `parse_evtx_events.py`.
+
+- Lab validation references mapped.
