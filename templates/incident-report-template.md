@@ -29,3 +29,6 @@ Detailed explanation of attack path and initial ingress vector.
 - Attach parsed event ID frequency summary from `parse_evtx_events.py`.
 
 - Lab validation references mapped.
+
+## 6. Artifact Hashes & Signatures
+Record SHA256 hashes of all quarantined dropper samples.
