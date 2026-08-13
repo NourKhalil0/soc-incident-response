@@ -11,3 +11,5 @@ Emulated adversary executed PowerShell download cradle and spawned HTTPS beacon 
 ## 3. Mitigation & Detection Validation
 - Sigma rule `proc_creation_win_powershell_download_cradle.yml` triggered within 4 seconds.
 - Host quarantined via Defender EDR.
+
+- All artifacts defanged prior to storage.
