@@ -18,3 +18,6 @@ Rapid live triage commands for Windows endpoints.
 `Get-ItemProperty 'HKLM:\Software\Microsoft\Windows\CurrentVersion\Run'`
 
 - Note: Always pipe output to hash tables or out-file for chain of custody.
+
+# Enumerate WMI event consumers
+`Get-CimInstance -Namespace root\subscription -ClassName __EventConsumer`
