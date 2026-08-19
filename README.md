@@ -41,3 +41,8 @@ python scripts/parse_evtx_events.py security_export.xml --filter 4625
 - `docs/lab-simulation-02-cobalt-strike.md`: Beacon triage simulation.
 
 - MITRE ATT&CK T1047: WMI triage procedures documented.
+
+```bash
+# Analyze domain entropy for algorithmically generated C2 domains
+python scripts/summarize_pcap_conversations.py evilcorp.biz xyz981723498172.cc
+```
