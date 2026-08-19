@@ -18,3 +18,7 @@ if __name__ == '__main__':
 
     def test_empty_string(self):
         self.assertEqual(calculate_shannon_entropy(''), 0.0)
+
+    def test_entropy_distribution(self):
+        ent = calculate_shannon_entropy('abcdefgh')
+        self.assertGreater(ent, 2.5)
