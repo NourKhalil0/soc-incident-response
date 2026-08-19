@@ -1,0 +1,21 @@
+title: WMIC Remote Process Creation
+id: 1a2b3c4d-5e6f-7a8b-9c0d-1e2f3a4b5c6d
+status: stable
+description: Detects execution of wmic.exe to spawn processes on remote hosts
+author: Nour Mo
+references:
+  - https://attack.mitre.org/techniques/T1047/
+logsource:
+  category: process_creation
+  product: windows
+detection:
+  selection:
+    Image|endswith: '\wmic.exe'
+    CommandLine|contains:
+      - '/node:'
+      - 'process call create'
+  condition: selection
+level: high
+tags:
+  - attack.execution
+  - attack.t1047
