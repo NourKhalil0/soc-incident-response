@@ -15,3 +15,6 @@ class TestDGAAnalyzer(unittest.TestCase):
 
 if __name__ == '__main__':
     unittest.main()
+
+    def test_empty_string(self):
+        self.assertEqual(calculate_shannon_entropy(''), 0.0)
