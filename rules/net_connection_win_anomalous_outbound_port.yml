@@ -1,0 +1,22 @@
+title: Anomalous Outbound Connection on Non-Standard Port
+id: 2b3c4d5e-6f7a-8b9c-0d1e-2f3a4b5c6d7e
+status: stable
+description: Detects process outbound network connections on uncommon C2 ports (e.g. 4444, 1337, 8443)
+author: Nour Mo
+references:
+  - https://attack.mitre.org/techniques/T1071/
+logsource:
+  category: network_connection
+  product: windows
+detection:
+  selection:
+    DestinationPort:
+      - 4444
+      - 1337
+      - 8888
+      - 9001
+  condition: selection
+level: high
+tags:
+  - attack.command_and_control
+  - attack.t1071
