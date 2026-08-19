@@ -23,3 +23,5 @@ Guide Tier 1 and Tier 2 SOC analysts through triage, header analysis, attachment
 ## 5. Mailbox Containment Procedures
 - Use Microsoft Defender for Office 365 Explorer to execute a tenant-wide `HardDelete`.
 - Block sender domain and originating IP on perimeter secure email gateway (SEG).
+
+- Run suspicious attachment domains through `scripts/summarize_pcap_conversations.py`.
