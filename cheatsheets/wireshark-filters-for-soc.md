@@ -10,3 +10,6 @@
 
 ## 3. Data Exfiltration
 - Large outbound TCP streams: `tcp.len > 1460 and ip.dst != 10.0.0.0/8`
+
+## 4. DNS Entropy Inspection
+- Filter high length DNS queries: `dns.qry.name.len > 35`
