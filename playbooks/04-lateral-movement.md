@@ -11,3 +11,5 @@
 ## 3. WMI Remote Execution Triage
 - Review Event ID 5861 in `Microsoft-Windows-WMI-Activity/Operational`.
 - Identify parent process executing `wmic.exe /node:<target>`.
+
+- Rule `rules/proc_creation_win_wmic_remote_process.yml` operational.
