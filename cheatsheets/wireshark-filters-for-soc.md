@@ -13,3 +13,5 @@
 
 ## 4. DNS Entropy Inspection
 - Filter high length DNS queries: `dns.qry.name.len > 35`
+
+- Cross-check flagged domains against AbuseIPDB via `scripts/check_ip_reputation.py`.
