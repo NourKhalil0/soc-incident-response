@@ -12,3 +12,6 @@ Determine exact patient-zero workstation, initial compromise vector, and dwell t
 1. Extract MFT using FTK Imager.
 2. Parse MFT records using `analyzeMFT.py`.
 3. Plot created timestamps against first observed network C2 beacon.
+
+## 4. Dwell Time Estimation Formula
+`Dwell Time = Quarantined Timestamp - First Ingress Artifact Timestamp`
