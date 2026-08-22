@@ -46,3 +46,5 @@ python scripts/parse_evtx_events.py security_export.xml --filter 4625
 # Analyze domain entropy for algorithmically generated C2 domains
 python scripts/summarize_pcap_conversations.py evilcorp.biz xyz981723498172.cc
 ```
+
+- `playbooks/07-ransomware-root-cause-analysis.md`: Root cause analysis.
