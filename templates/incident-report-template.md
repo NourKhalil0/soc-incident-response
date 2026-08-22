@@ -32,3 +32,6 @@ Detailed explanation of attack path and initial ingress vector.
 
 ## 6. Artifact Hashes & Signatures
 Record SHA256 hashes of all quarantined dropper samples.
+
+## 7. Dwell Time & Root Cause Confirmation
+Document patient-zero endpoint and verified ingress method.
