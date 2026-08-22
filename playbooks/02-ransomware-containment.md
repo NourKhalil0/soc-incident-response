@@ -16,3 +16,5 @@ Rapidly isolate affected endpoints to prevent lateral propagation, preserve vola
 - Cross-reference memory triage findings with `cheatsheets/windows-memory-acquisition.md`.
 
 - Verified against Cobalt Strike emulation runbook.
+
+- After immediate containment, transition directly to Playbook 07 (Root Cause Analysis).
