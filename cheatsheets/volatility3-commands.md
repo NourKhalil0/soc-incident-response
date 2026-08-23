@@ -9,3 +9,6 @@ Command reference for triage of memory dumps (`.raw`, `.vmem`, `.dmp`).
 
 ## 2. Injected Code
 `python3 vol.py -f memory.raw windows.malfind`
+
+## 3. Network Sockets in Volatile Memory
+`python3 vol.py -f memory.raw windows.netscan`
