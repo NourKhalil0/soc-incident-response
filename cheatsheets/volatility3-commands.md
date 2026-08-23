@@ -12,3 +12,5 @@ Command reference for triage of memory dumps (`.raw`, `.vmem`, `.dmp`).
 
 ## 3. Network Sockets in Volatile Memory
 `python3 vol.py -f memory.raw windows.netscan`
+
+- Compare netscan PIDs against `windows.pstree` to spot unlinked sockets.
