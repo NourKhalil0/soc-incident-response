@@ -1,11 +1,12 @@
 #!/usr/bin/env python3
 """
 Automated IOC Extractor from incident triage reports.
-Detects SHA256, MD5, and IPv4 addresses with optional defanging.
+Detects SHA256, MD5, and IPv4 addresses with defanging and CSV/JSON export.
 """
 
 import re
 import sys
+import csv
 import json
 import argparse
 
@@ -40,6 +41,7 @@ def main():
     parser = argparse.ArgumentParser(description="Extract IOCs from text files")
     parser.add_argument("file", help="Path to report file")
     parser.add_argument("--json", action="store_true", help="Output in JSON format")
+    parser.add_argument("--csv", action="store_true", help="Output in CSV format")
     parser.add_argument("--defang", action="store_true", help="Defang extracted IPs")
     args = parser.parse_args()
 
@@ -53,6 +55,15 @@ def main():
     results = extract_iocs_from_text(content, do_defang=args.defang)
     if args.json:
         print(json.dumps(results, indent=2))
+    elif args.csv:
+        writer = csv.writer(sys.stdout)
+        writer.writerow(["Type", "Indicator"])
+        for ip in results["ipv4"]:
+            writer.writerow(["IPv4", ip])
+        for s in results["sha256"]:
+            writer.writerow(["SHA256", s])
+        for m in results["md5"]:
+            writer.writerow(["MD5", m])
     else:
         print(f"[+] Extracted IOCs:")
         print(f"  - Public IPs: {len(results['ipv4'])}")
