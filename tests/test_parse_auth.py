@@ -27,3 +27,6 @@ class TestAuthParser(unittest.TestCase):
 
 if __name__ == '__main__':
     unittest.main()
+
+    def test_empty_log(self):
+        self.assertEqual(len(parse_auth_file(self.temp_file.name)[0]), 2)
