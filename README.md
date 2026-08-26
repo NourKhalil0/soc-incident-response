@@ -48,3 +48,5 @@ python scripts/summarize_pcap_conversations.py evilcorp.biz xyz981723498172.cc
 ```
 
 - `playbooks/07-ransomware-root-cause-analysis.md`: Root cause analysis.
+
+<!-- Formatted documentation tables -->
