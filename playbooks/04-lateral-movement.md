@@ -13,3 +13,5 @@
 - Identify parent process executing `wmic.exe /node:<target>`.
 
 - Rule `rules/proc_creation_win_wmic_remote_process.yml` operational.
+
+- Cross-referenced with Playbook 07 for root cause analysis.
