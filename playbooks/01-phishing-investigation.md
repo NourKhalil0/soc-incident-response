@@ -25,3 +25,5 @@ Guide Tier 1 and Tier 2 SOC analysts through triage, header analysis, attachment
 - Block sender domain and originating IP on perimeter secure email gateway (SEG).
 
 - Run suspicious attachment domains through `scripts/summarize_pcap_conversations.py`.
+
+- Cross-referenced with Playbook 03 and Playbook 06.
