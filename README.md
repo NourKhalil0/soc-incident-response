@@ -50,3 +50,11 @@ python scripts/summarize_pcap_conversations.py evilcorp.biz xyz981723498172.cc
 - `playbooks/07-ransomware-root-cause-analysis.md`: Root cause analysis.
 
 <!-- Formatted documentation tables -->
+
+## MITRE ATT&CK Matrix Mapping
+| Playbook | MITRE ID | Technique Name | Detection Rule |
+|---|---|---|---|
+| 01-Phishing | T1566.001 | Spearphishing Attachment | `rules/proc_creation_win_powershell_download_cradle.yml` |
+| 02-Ransomware | T1490 | Inhibit System Recovery | `rules/proc_creation_win_vssadmin_shadow_delete.yml` |
+| 03-Credentials | T1078.004 | Cloud Accounts | Sentinel KQL Password Spray Query |
+| 04-Lateral Movement | T1569.002 | Service Execution (PsExec) | `rules/proc_creation_win_psexec_service_install.yml` |
