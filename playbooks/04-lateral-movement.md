@@ -15,3 +15,8 @@
 - Rule `rules/proc_creation_win_wmic_remote_process.yml` operational.
 
 - Cross-referenced with Playbook 07 for root cause analysis.
+
+## 4. DCSync Detection & Remediation
+- Look for Directory Service Access (Event ID `4662`) with extended rights:
+  - `DS-Replication-Get-Changes`
+  - `DS-Replication-Get-Changes-All`
