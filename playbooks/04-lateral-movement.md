@@ -14,3 +14,9 @@
 1. Isolate originating workstation using EDR network containment.
 2. Invalidate active Kerberos tickets with `klist purge`.
 3. Restrict internal SMB (`TCP 445`) and RDP (`TCP 3389`) inter-VLAN routing.
+
+## 4. DCSync Detection & Remediation
+- Look for Directory Service Access (Event ID `4662`) with extended rights:
+  - `DS-Replication-Get-Changes`
+  - `DS-Replication-Get-Changes-All`
+- If originating computer is not an authorized Domain Controller, isolate host immediately and reset KRBTGT.
