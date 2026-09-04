@@ -28,3 +28,12 @@ SigninLogs
 | where UniqueAccounts >= 10
 | sort by FailureCount desc
 ```
+
+## 4. Anomalous OAuth App Permission Grants
+```kql
+AuditLogs
+| where OperationName in ("Consent to application", "Add service principal credentials")
+| extend TargetResource = tostring(TargetResources[0].displayName)
+| extend InitiatedBy = tostring(InitiatedBy.user.userPrincipalName)
+| project TimeGenerated, OperationName, TargetResource, InitiatedBy
+```
