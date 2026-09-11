@@ -35,3 +35,10 @@ Record SHA256 hashes of all quarantined dropper samples.
 
 ## 7. Dwell Time & Root Cause Confirmation
 Document patient-zero endpoint and verified ingress method.
+
+## 5. MITRE ATT&CK Mapping
+| Tactic | Technique ID | Technique Name | Evidence |
+|---|---|---|---|
+| Initial Access | T1566.001 | Spearphishing Attachment | Malicious attachment |
+| Execution | T1059.001 | PowerShell | Download cradle |
+| Impact | T1490 | Inhibit System Recovery | `vssadmin delete shadows` |
