@@ -25,3 +25,10 @@ Detailed explanation of attack path and initial ingress vector.
 - [ ] Update detection signatures in SIEM
 - [ ] Remediate identified configuration vulnerabilities
 - [ ] Conduct end-user awareness refresher
+
+## 5. MITRE ATT&CK Mapping
+| Tactic | Technique ID | Technique Name | Evidence |
+|---|---|---|---|
+| Initial Access | T1566.001 | Spearphishing Attachment | Malicious `.xlsm` attachment |
+| Execution | T1059.001 | PowerShell | WebClient download cradle |
+| Impact | T1490 | Inhibit System Recovery | `vssadmin delete shadows` execution |
