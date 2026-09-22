@@ -63,3 +63,6 @@ python scripts/summarize_pcap_conversations.py evilcorp.biz xyz981723498172.cc
 - Implemented 3 triage CLI utilities with passing unit tests.
 - Formulated 7 comprehensive incident response playbooks.
 - Integrated memory, event log, and network DGA detection workflows.
+
+## Lab Validation Reports
+- [September 2026 Simulation Results](docs/lab-simulation-results.md)
