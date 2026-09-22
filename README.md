@@ -35,3 +35,6 @@ pytest tests/
 | 02-Ransomware | T1490 | Inhibit System Recovery | `rules/proc_creation_win_vssadmin_shadow_delete.yml` |
 | 03-Credentials | T1078.004 | Cloud Accounts | Sentinel KQL Password Spray Query |
 | 04-Lateral Movement | T1569.002 | Service Execution (PsExec) | `rules/proc_creation_win_psexec_service_install.yml` |
+
+## Lab Validation Reports
+- [September 2026 Simulation Results](docs/lab-simulation-results.md)
