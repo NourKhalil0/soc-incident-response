@@ -70,3 +70,6 @@ python scripts/summarize_pcap_conversations.py evilcorp.biz xyz981723498172.cc
 ## References & Standards
 - [NIST SP 800-61 Rev. 2](https://csrc.nist.gov/publications/detail/sp/800-61/rev-2/final)
 - [SANS Incident Handler's Handbook](https://www.sans.org/white-papers/33393/)
+
+---
+*Maintained by Nour Mo - Cybersecurity Lab Research*
