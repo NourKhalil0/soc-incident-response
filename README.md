@@ -43,3 +43,6 @@ pytest tests/
 - [NIST SP 800-61 Rev. 2: Computer Security Incident Handling Guide](https://csrc.nist.gov/publications/detail/sp/800-61/rev-2/final)
 - [SANS Incident Handler's Handbook](https://www.sans.org/white-papers/33393/)
 - [MITRE ATT&CK Enterprise Matrix](https://attack.mitre.org/)
+
+---
+*Maintained by Nour Mo - Cybersecurity Lab Research*
