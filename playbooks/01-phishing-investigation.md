@@ -27,3 +27,6 @@ Guide Tier 1 and Tier 2 SOC analysts through triage, header analysis, attachment
 - Run suspicious attachment domains through `scripts/summarize_pcap_conversations.py`.
 
 - Cross-referenced with Playbook 03 and Playbook 06.
+
+---
+*Associated Detection Rule: `rules/proc_creation_win_powershell_download_cradle.yml`*
