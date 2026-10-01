@@ -29,3 +29,6 @@ Guide Tier 1 and Tier 2 SOC analysts through triage, header analysis, attachment
   New-ComplianceSearchAction -SearchName 'Phish_Purge' -Purge -PurgeType HardDelete
   ```
 - Block sender domain and originating IP on perimeter secure email gateway (SEG).
+
+---
+*Associated Detection Rule: `rules/proc_creation_win_powershell_download_cradle.yml`*
